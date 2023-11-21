@@ -103,8 +103,7 @@ nav li, address li{
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    margin-right: 40px;
-    width: calc((261-2*40)/3);
+    width: calc((261 - 2*40)/3);
 }
 
 .nav-main:hover,
@@ -184,7 +183,7 @@ button:focus {
 }
 
 .advatages-section li {
-    width: calc((1128-24*3)/4);
+    width: calc((1128 - 24*3)/4);
 }
 
 .advantage-point {
@@ -223,7 +222,7 @@ button:focus {
 
 .team-element {
     background-color: #FFF;
-    flex-basis: calc((1128-24*3)/4);
+    flex-basis: calc((1128 - 24*3)/4);
 }
 
 .team-member-container {
@@ -265,13 +264,14 @@ button:focus {
 
 .portfolio-section li {
     background-color: #FFF;
-    flex-basis: calc((1128*2-24*5)/6);
+    flex-basis: calc((1128*2 - 24*5)/6);
 }
 
 .portfolio-item-container {
     padding: 32px 16px;
     text-align: left;
     border: 1px solid #E7E9FC;
+    border-top: 0;
 }
 
 .portfolio-item {
