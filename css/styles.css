@@ -46,20 +46,6 @@ img {
     padding: 0 15px;
 }
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-
 main {
     flex-grow: 1;
 }
@@ -90,31 +76,40 @@ header .container {
     color: #2e2f42;
 }
 
-nav {
+.nav-main-menu {
     display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
-nav li, address li{
+.nav-main li, address li{
     display: inline;
 }
 
-.nav-main {
+.nav-main-element {
     color: #2e2f42;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
     width: calc((261 - 2*40)/3);
+    padding: 24px 0;
 }
 
-.nav-main:hover,
-.nav-main:focus {
+.nav-main-element:hover,
+.nav-main-element:focus {
     color:#404BBF;
+}
+
+.address-main-menu {
+    display: flex;
+    gap: 40px;
 }
 
 .address-main {
     font-style: normal;
     margin-left: 332px;
 }
+
 .contact {
     color: #434455;
     line-height: 1.5;
@@ -147,9 +142,12 @@ nav li, address li{
 }
 
 button {
+    display: block;
     background-color: #4D5AE5;
     cursor: pointer;
-    margin: 48px 480px;
+    min-width: 169px;
+    height: 56px;
+    margin: 48px auto;
     border: 4px;
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -171,19 +169,31 @@ button:focus {
 }
 
 /* Advantages section */
-.advantages-section .container {
+.advantages-section {
     padding: 120px 0;
 }
 
-.hidden-title {
-    color: rgba(0, 0, 0, 0);
-}
-.advantages-list {
-    display: flex;
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
-.advatages-section li {
-    width: calc((1128 - 24*3)/4);
+.advantages-list {
+    display: flex;
+    gap: 24px;
+}
+
+.advantages--list-element {
+    flex-basis: calc((100% - 3*24px) / 4);
 }
 
 .advantage-point {
@@ -192,15 +202,13 @@ button:focus {
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.4px;
+    margin-bottom: 8px;
 }
 
 
 /* Our team section */
 .team-section {
     background-color: #F4F4FD;
-}
-
-.team-section .container {
     padding: 120px 0;
 }
 
@@ -222,7 +230,8 @@ button:focus {
 
 .team-element {
     background-color: #FFF;
-    flex-basis: calc((1128 - 24*3)/4);
+    flex-basis: calc((100% - 3*24px) / 4);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-member-container {
@@ -241,7 +250,7 @@ button:focus {
 }
 
 /* Portfolio section */
-.portfolio-section .container {
+.portfolio-section {
     padding: 120px 0;
 }
 
@@ -260,12 +269,13 @@ button:focus {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
+    row-gap: 48px;
 }
 
-.portfolio-section li {
+ .portfolio-list-element {
     background-color: #FFF;
-    flex-basis: calc((1128*2 - 24*5)/6);
-}
+    flex-basis: calc((100% - 2*24px)/3);
+ }
 
 .portfolio-item-container {
     padding: 32px 16px;
@@ -281,6 +291,7 @@ button:focus {
     line-height: 1.2;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    margin-bottom: 8px;
 }
 
 /* Footer */
@@ -288,6 +299,11 @@ button:focus {
 .footer {
     background-color: #2E2F42;
     padding: 100px 0;
+}
+
+.footer .logo {
+    display: block;
+    margin-bottom: 16px;
 }
 
 .footer-logo {
@@ -301,7 +317,6 @@ button:focus {
     line-height: 1.5;
     letter-spacing: 0.02em;
     width: 264px;
-    margin-top: 16px;
 }
 
 
